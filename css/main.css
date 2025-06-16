@@ -1,0 +1,410 @@
+/* hero banner */
+
+.hero-container {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 265px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.hero-slider {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.hero-slide {
+    width: 20%;
+    height: 100%;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.slider-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.prev-btn, .next-btn {
+    width: 40px;
+    height: 90px;
+    background-color: #fffffffa;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.prev-btn {
+    border-radius: 0 4px 4px 0;
+}
+
+.next-btn {
+    border-radius: 4px 0 0 4px;
+}
+
+.prev-btn i, .next-btn i {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.slide-dots {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px 0;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    width: 18px;
+    border-radius: 10px;
+    background-color: #1b1b1b;
+}
+
+
+/* products container */
+
+/* .products-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+} */
+
+.products-container {
+    display: flex; /* Enables Flexbox layout for arranging child items in a row by default */
+    
+    justify-content: space-between; /* Distributes space evenly between items, pushing first to the start and last to the end */
+    
+    margin-bottom: 20px; /* Adds space below the .products-container (for separation from next section) */
+    
+    gap: 20px; /* Adds 20px of space between each flex item (more readable than using margin) */
+}
+
+
+/* .small-banner {
+    width: 255px;
+    height: 320px;
+    flex-shrink: 0;
+} */
+
+.small-banner {
+    width: 255px; /* Sets a fixed width for the banner box */
+    
+    height: 320px; /* Sets a fixed height for the banner box */
+    
+    flex-shrink: 0; /* Prevents the banner from shrinking smaller than its set width in a flex container */
+}
+
+.small-banner img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.product-content {
+    height: 320px;
+    background-color: #fff;
+    width: calc(100% - 275px);
+    flex-grow: 1;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-content h3 {
+    padding: 12px 16px;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.product-carousel-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none; 
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; 
+}
+
+.product-card {
+    min-width: 216px;
+    height: 244px;
+    padding: 10px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.product-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card:hover img{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 6px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #050505;
+    font-weight: 500;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+        font-weight: bold; 
+
+}
+
+.carousel-prev-btn, .carousel-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 90px;
+    background-color: #fffffffa;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+    z-index: 2;
+    margin-top: -10px; 
+}
+
+.carousel-prev-btn {
+    left: 0;
+    border-radius: 0 4px 4px 0;
+    display: none;
+}
+
+.carousel-next-btn {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.carousel-prev-btn i, .carousel-next-btn i {
+    font-size: 1.2rem;
+    color: #000;
+}
+
+/* Grid Container Styles */
+
+.grid-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.grid-section {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.grid-header h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.arrow-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #2874f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.arrow-btn i {
+    color: #fff;
+    font-size: 14px;
+}
+
+.grid-items {
+    padding: 12px;
+    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-item {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+}
+
+.grid-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    border-radius: 2px;
+}
+
+.grid-item img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+.grid-item h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 6px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.grid-item p {
+    font-size: 16px;
+    color: #388e3c;
+    font-weight: 500;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    text-align: left;
+}
+
+.smartphone-banner {
+    flex: 2;
+    background-color: #f1f3f6;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.smartphone-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* new grid */
+
+.custom-grid-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.custom-left {
+  flex: 1;
+  align-content:center;
+}
+
+.custom-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.custom-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.custom-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

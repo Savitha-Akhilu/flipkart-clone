@@ -1,0 +1,232 @@
+/* header */
+
+.header-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    height: 70px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+    margin-top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* header left */
+
+.header-left {
+    display: flex;
+    background-color: white;
+    width: 65%;
+    align-items: center;
+    justify-content: space-between; 
+    height: 70px;
+    padding: 0 20px; 
+}
+
+.header-logo {
+    width: 20%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* .header-logo:hover{
+    transform: scale(1.1);    
+} */
+
+.search-bar {
+    width: 75%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px; 
+    border-radius: 8px;
+    background: #f0f5ff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; 
+}
+
+.search-bar:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.search-bar-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 1.2rem; 
+}
+
+.divider {
+    width: 1px; 
+    height: 25px; 
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.search-bar-input {
+    flex: 1; 
+    height: 100%; 
+    font-size: 1rem;
+    border: none;
+    outline: none; 
+    padding: 0 10px; 
+    background: transparent;
+}
+
+/* header right */
+
+.header-right {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    height: 70px;
+    background-color: white;
+    padding: 0 40px; 
+}
+
+.header-right-nav {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: black; 
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.header-right-nav i {
+    margin-right: 8px; 
+    font-size: 1.2rem;
+    color: black; 
+}
+
+.more-btn i {
+    margin-right: 0px;
+}
+
+.login-btn:hover {
+    background-color: #2a55e5;
+    color: white; 
+}
+
+.login-btn:hover i {
+    color: white; 
+}
+
+.header-right-nav .fa-chevron-down {
+    margin-left: 5px; 
+    font-size: .7rem; 
+    transition: transform 0.3s ease; 
+}
+
+.login-btn:hover .fa-chevron-down {
+    transform: rotate(180deg); 
+    color: white; 
+}
+
+.cart-btn, .seller-btn, .more-btn {
+    border: 1px solid transparent;
+}
+
+.more-btn {
+    display: flex;
+    align-items: center;
+}
+
+.more-btn i {
+    font-size: 1.2rem;
+}
+
+.cart-btn i, .seller-btn i {
+    margin-right: 8px; 
+    font-size: 1.1rem;
+    color: black;
+}
+
+.cart-btn:hover, .seller-btn:hover, .more-btn:hover {
+    border: 1px solid rgb(233, 233, 233);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);    
+}
+
+/* more button dropdown and login button dropdown */
+
+.more-btn-dropdown, .login-btn-dropdown {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    right: 0; 
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 220px; 
+    text-align: left;
+    padding: 5px;
+}
+
+.login-btn-dropdown {
+    left: 0;
+    width: 230px;
+}
+
+.login-btn-dropdown .customer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+.login-btn-dropdown .customer p {
+    color: #212121;
+    font-size: 1rem;
+}
+
+.customer .sign-up {
+    color: #2874f0;
+    text-decoration: none;
+}
+
+.customer .sign-up:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+.more-btn-dropdown a, .login-btn-dropdown a {
+    display: flex; 
+    align-items: center;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.more-btn-dropdown a img, .login-btn-dropdown a img {
+    margin-right: 10px; 
+    width: 20px; 
+    height: 20px; 
+}
+
+.more-btn-dropdown a:hover, .login-btn-dropdown a:hover {
+    border-radius: 5px;
+    background-color: #f0f0f0; 
+}
+
+/* Show dropdowns on hover */
+.login-btn:hover .login-btn-dropdown,
+.more-btn:hover .more-btn-dropdown {
+    display: block;
+}

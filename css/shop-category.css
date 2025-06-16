@@ -1,0 +1,228 @@
+.outer-container {
+    background-color: #f5f5f5;
+    padding: 80px 20px 20px 20px;
+}
+
+.shop-category-container {
+    background-color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.shop-category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    color: black;
+    margin: 0 21px;
+}
+
+.category p {
+    font-size: 1rem;
+}
+
+.category p i {
+    font-size: 0.8rem;
+    vertical-align: middle; 
+    transform: translateY(-2px); 
+}
+
+.category img {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    transition: transform 0.3s ease; 
+}
+
+/* .category:hover img {
+    transform: scale(1.1);    
+}
+
+.category:hover .category-name {
+    color: blue;
+}
+
+.category:hover .category-name .fa-chevron-down {
+    color: rgb(66, 66, 255);
+    transition: transform 0.3s ease;
+    transform: rotate(180deg); 
+} */
+
+/* category menu */
+
+.category-menu {
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 250px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+}
+
+.category-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category-menu li {
+    padding: 12px;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.category-menu li i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.category-menu li:hover {
+    background-color: rgb(231, 231, 255);
+}
+
+.menu-heading:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.menu-heading:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.category:hover .category-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.category:hover .category-menu {
+    display: block; 
+}
+
+.category-menu li {
+    font-weight: normal; 
+}
+
+.menu-heading:hover {
+    font-weight: bold; 
+}
+
+.menu-heading:hover .fa-chevron-right {
+    display: inline; 
+}
+
+.category-menu li:hover {
+    font-weight: bold; 
+}
+
+.category-menu li:hover .fa-chevron-right {
+    display: inline; 
+}
+
+.category-menu li .fa-chevron-right {
+    display: none; 
+}
+
+.menu-heading .fa-chevron-right {
+    display: none; 
+}
+
+.category-menu li:hover .fa-chevron-right {
+    display: inline; 
+}
+
+/* category submenu */
+
+.category-submenu {
+    display: none;
+    position: absolute;
+    top: -2%;
+    left: 98%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.category-submenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category-submenu li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.category-submenu li:hover {
+    background-color: white;
+}
+
+.menu-heading:hover .category-submenu{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.category-submenu li:first-child {
+    font-weight: bold; 
+}
+
+/* .menu-heading:hover .category-submenu {
+    top: -1%;
+} */
+
+.menu-heading:hover .category-submenu {
+    height: auto; 
+    height: 422px; 
+    max-height: 422px; 
+    overflow-y: auto; 
+}
+
+.menu-heading:hover .cs-electronics,
+.menu-heading:hover .cs-home-and-furniture {
+    height: auto; 
+    height: 499px; 
+    max-height: 499px; 
+    overflow-y: auto; 
+}
+
+.menu-heading:hover .cs-beauty-toys-and-more {
+    height: auto; 
+    height: 461px; 
+    max-height: 461px; 
+    overflow-y: auto; 
+}
